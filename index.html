@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Colo | Panadería Artesanal</title>
+  <meta name="description" content="Panadería y confitería artesanal en Oberá. Descubrí nuestros productos caseros: panificados, pastelería, chipá y facturas.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="./img/gorro2.ico">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <div class="container nav-container">
+      <h1 class="logo">El Colo</h1>
+      <button id="menu-toggle" aria-label="Abrir menú"><i class="bi bi-list"></i></button>
+      <nav id="nav">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="inicio" class="hero">
+    <div class="hero-content" data-aos="fade-up">
+      <h2>Panadería & Confitería Artesanal</h2>
+      <p>Elaboración casera desde 2021</p>
+      <a href="#productos" class="btn">Ver productos</a>
+    </div>
+  </section>
+
+  <section id="nosotros" class="section">
+    <div class="container">
+      <h2 data-aos="fade-right">Sobre nosotros</h2>
+      <div class="grid-2">
+        <div data-aos="fade-up">
+          <p>En pleno 2021, en medio de un mundo cambiante, nació <strong>El Colo</strong>, un espacio dedicado al pan y la pastelería artesanal. Un sueño familiar hecho realidad, que hoy compartimos con nuestra comunidad.</p>
+          <p>Cada producto refleja la pasión por lo casero y la tradición panadera que nos define.</p>
+        </div>
+        <img src="./img/nosotros.jpg" alt="Panadería El Colo" data-aos="zoom-in">
+      </div>
+    </div>
+  </section>
+
+  <section id="productos" class="section bg-light">
+    <div class="container">
+      <h2 data-aos="fade-right">Nuestros Productos</h2>
+      <div class="grid-4">
+        <div class="product-card" data-aos="fade-up">
+          <i class="bi bi-bag-fill icon"></i>
+          <h3>Panificados</h3>
+          <p>Pan casero, lactales, flautines y más.</p>
+        </div>
+        <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+          <i class="bi bi-cupcake icon"></i>
+          <h3>Pastelería</h3>
+          <p>Tortas, tartas dulces y pastafrolas artesanales.</p>
+        </div>
+        <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+          <i class="bi bi-droplet-half icon"></i>
+          <h3>Facturas</h3>
+          <p>De manteca, medialunas y vigilantes recién horneadas.</p>
+        </div>
+        <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+          <i class="bi bi-emoji-heart-eyes icon"></i>
+          <h3>Chipá</h3>
+          <p>Receta tradicional, crocante y sabroso.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="horarios" class="section">
+    <div class="container">
+      <h2 data-aos="fade-right">Horarios de atención</h2>
+      <div class="horarios" data-aos="fade-up">
+        <p><strong>Lunes a Sábados:</strong> 8:00 a 12:30 | 16:30 a 21:30</p>
+        <p><strong>Domingos:</strong> 8:30 a 12:00 | 16:30 a 21:00</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="section bg-light">
+    <div class="container">
+      <h2 data-aos="fade-right">Contacto</h2>
+      <div class="grid-3">
+        <a href="https://wa.link/hjxzrh" target="_blank" class="contact-card" data-aos="zoom-in">
+          <i class="bi bi-whatsapp"></i>
+          <h4>Whatsapp</h4>
+        </a>
+        <a href="https://www.instagram.com/_el_colo/" target="_blank" class="contact-card" data-aos="zoom-in">
+          <i class="bi bi-instagram"></i>
+          <h4>Instagram</h4>
+        </a>
+        <div class="contact-card" data-aos="zoom-in">
+          <i class="bi bi-envelope"></i>
+          <h4>Formulario</h4>
+          <form action="https://formspree.io/f/tu-codigo-aqui" method="POST">
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
+            <button type="submit" class="btn">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 <strong>El Colo</strong> | Diseño por Gabriel</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    const toggle = document.getElementById("menu-toggle");
+    const nav = document.getElementById("nav");
+    toggle.addEventListener("click", () => nav.classList.toggle("show"));
+  </script>
+
+</body>
+
+</html>
