@@ -4,130 +4,759 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>El Colo | Panadería Artesanal</title>
-  <meta name="description" content="Panadería y confitería artesanal en Oberá. Descubrí nuestros productos caseros: panificados, pastelería, chipá y facturas.">
+  <title>El Colo | Panadería & Confitería Artesanal en Oberá</title>
+  <meta name="description" content="Panadería y confitería artesanal en Oberá. Descubrí nuestros productos caseros: panificados, pastelería, chipá y facturas elaborados con ingredientes de calidad.">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="El Colo | Panadería Artesanal">
+  <meta property="og:description" content="Panadería y confitería artesanal en Oberá con productos frescos y caseros.">
+  <meta property="og:image" content="./img/og-image.jpg">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
   <link rel="stylesheet" href="./index.css">
+  
+  <!-- Favicon -->
   <link rel="icon" href="./img/gorro2.ico">
+  
+  <!-- AOS Animation -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
+  <!-- Barra de anuncios -->
+  <div class="announcement-bar">
+    <div class="container">
+      <p><i class="bi bi-info-circle"></i> ¡Hacemos envíos sin cargo en Oberá! <a href="#contacto">Contactanos</a></p>
+    </div>
+  </div>
 
-  <header>
+  <!-- Header -->
+  <header id="header">
     <div class="container nav-container">
-      <h1 class="logo">El Colo</h1>
-      <button id="menu-toggle" aria-label="Abrir menú"><i class="bi bi-list"></i></button>
+      <div class="logo-container">
+        <h1 class="logo">El Colo</h1>
+        <span class="tagline">Panadería Artesanal</span>
+      </div>
+      
+      <button id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span class="menu-icon"></span>
+      </button>
+      
       <nav id="nav">
         <ul>
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#nosotros">Nosotros</a></li>
-          <li><a href="#productos">Productos</a></li>
-          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="#inicio" class="nav-link">Inicio</a></li>
+          <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+          <li><a href="#productos" class="nav-link">Productos</a></li>
+          <li><a href="#galeria" class="nav-link">Galería</a></li>
+          <li><a href="#testimonios" class="nav-link">Testimonios</a></li>
+          <li><a href="#contacto" class="nav-link">Contacto</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
+  <!-- Hero Section -->
   <section id="inicio" class="hero">
-    <div class="hero-content" data-aos="fade-up">
-      <h2>Panadería & Confitería Artesanal</h2>
-      <p>Elaboración casera desde 2021</p>
-      <a href="#productos" class="btn">Ver productos</a>
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+        <span class="subtitle">Desde 2021</span>
+        <h2>Panadería & Confitería<br>Artesanal</h2>
+        <p>Sabor, tradición y calidad en cada bocado</p>
+        <div class="hero-buttons">
+          <a href="#productos" class="btn btn-primary">Ver productos</a>
+          <a href="#contacto" class="btn btn-outline">Contactar</a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <a href="#nosotros">
+        <span>Descubre más</span>
+        <i class="bi bi-chevron-down"></i>
+      </a>
     </div>
   </section>
 
+  <!-- Nosotros Section -->
   <section id="nosotros" class="section">
     <div class="container">
-      <h2 data-aos="fade-right">Sobre nosotros</h2>
+      <div class="section-header">
+        <span class="section-subtitle">Conócenos</span>
+        <h2 class="section-title" data-aos="fade-right">Nuestra Historia</h2>
+      </div>
+      
       <div class="grid-2">
-        <div data-aos="fade-up">
-          <p>En pleno 2021, en medio de un mundo cambiante, nació <strong>El Colo</strong>, un espacio dedicado al pan y la pastelería artesanal. Un sueño familiar hecho realidad, que hoy compartimos con nuestra comunidad.</p>
-          <p>Cada producto refleja la pasión por lo casero y la tradición panadera que nos define.</p>
+        <div class="content-block" data-aos="fade-up" data-aos-delay="100">
+          <p class="highlight">En pleno 2021, en medio de un mundo cambiante, nació <strong>El Colo</strong>, un espacio dedicado al pan y la pastelería artesanal.</p>
+          <p>Un sueño familiar hecho realidad, que hoy compartimos con nuestra comunidad de Oberá. Cada producto refleja la pasión por lo casero y la tradición panadera que nos define.</p>
+          <p>Utilizamos ingredientes de primera calidad y técnicas artesanales para ofrecer lo mejor a nuestros clientes, quienes son el centro de nuestra inspiración.</p>
+          <div class="features">
+            <div class="feature">
+              <i class="bi bi-award"></i>
+              <span>Calidad artesanal</span>
+            </div>
+            <div class="feature">
+              <i class="bi bi-heart"></i>
+              <span>Ingredientes seleccionados</span>
+            </div>
+            <div class="feature">
+              <i class="bi bi-house-heart"></i>
+              <span>Ambiente familiar</span>
+            </div>
+          </div>
         </div>
-        <img src="./img/nosotros.jpg" alt="Panadería El Colo" data-aos="zoom-in">
+        <div class="image-container" data-aos="zoom-in" data-aos-delay="200">
+          <img src="./img/nosotros.jpg" alt="Panadería El Colo - Elaboración artesanal" class="rounded-image">
+          <div class="experience-badge">
+            <span class="number">4</span>
+            <span class="text">Años de<br>experiencia</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- Productos Section -->
   <section id="productos" class="section bg-light">
     <div class="container">
-      <h2 data-aos="fade-right">Nuestros Productos</h2>
-      <div class="grid-4">
-        <div class="product-card" data-aos="fade-up">
-          <i class="bi bi-bag-fill icon"></i>
-          <h3>Panificados</h3>
-          <p>Pan casero, lactales, flautines y más.</p>
+      <div class="section-header">
+        <span class="section-subtitle">Delicioso</span>
+        <h2 class="section-title" data-aos="fade-right">Nuestros Productos</h2>
+      </div>
+      
+      <div class="category-tabs">
+        <button class="category-tab active" data-category="all">Todos</button>
+        <button class="category-tab" data-category="pan">Panificados</button>
+        <button class="category-tab" data-category="dulce">Pastelería</button>
+        <button class="category-tab" data-category="otros">Especialidades</button>
+      </div>
+      
+      <div class="products-grid">
+        <div class="product-card" data-category="pan" data-aos="fade-up">
+          <div class="product-image">
+            <img src="/api/placeholder/400/300" alt="Pan casero">
+            <div class="product-tag">Popular</div>
+          </div>
+          <div class="product-info">
+            <h3>Pan Casero</h3>
+            <p>Elaborado diariamente con masa madre y horneado a la perfección.</p>
+            <span class="product-price">$650<small>/unidad</small></span>
+          </div>
         </div>
-        <div class="product-card" data-aos="fade-up" data-aos-delay="100">
-          <i class="bi bi-cupcake icon"></i>
-          <h3>Pastelería</h3>
-          <p>Tortas, tartas dulces y pastafrolas artesanales.</p>
+        
+        <div class="product-card" data-category="pan" data-aos="fade-up" data-aos-delay="100">
+          <div class="product-image">
+            <img src="/api/placeholder/400/300" alt="Flautines">
+          </div>
+          <div class="product-info">
+            <h3>Flautines</h3>
+            <p>Crujientes por fuera, suaves por dentro, ideales para sandwiches.</p>
+            <span class="product-price">$500<small>/unidad</small></span>
+          </div>
         </div>
-        <div class="product-card" data-aos="fade-up" data-aos-delay="200">
-          <i class="bi bi-droplet-half icon"></i>
-          <h3>Facturas</h3>
-          <p>De manteca, medialunas y vigilantes recién horneadas.</p>
+        
+        <div class="product-card" data-category="dulce" data-aos="fade-up" data-aos-delay="150">
+          <div class="product-image">
+            <img src="/api/placeholder/400/300" alt="Facturas">
+            <div class="product-tag">Fresco</div>
+          </div>
+          <div class="product-info">
+            <h3>Facturas</h3>
+            <p>Medialunas, vigilantes y cañoncitos recién horneados.</p>
+            <span class="product-price">$350<small>/unidad</small></span>
+          </div>
         </div>
-        <div class="product-card" data-aos="fade-up" data-aos-delay="300">
-          <i class="bi bi-emoji-heart-eyes icon"></i>
-          <h3>Chipá</h3>
-          <p>Receta tradicional, crocante y sabroso.</p>
+        
+        <div class="product-card" data-category="dulce" data-aos="fade-up" data-aos-delay="200">
+          <div class="product-image">
+            <img src="/api/placeholder/400/300" alt="Tortas">
+          </div>
+          <div class="product-info">
+            <h3>Tortas</h3>
+            <p>Chocolate, frutales, chajá y más variedades para disfrutar.</p>
+            <span class="product-price">$3500<small>/porción</small></span>
+          </div>
         </div>
+        
+        <div class="product-card" data-category="otros" data-aos="fade-up" data-aos-delay="250">
+          <div class="product-image">
+            <img src="/api/placeholder/400/300" alt="Chipá">
+            <div class="product-tag">Tradicional</div>
+          </div>
+          <div class="product-info">
+            <h3>Chipá</h3>
+            <p>Receta tradicional, crocante y sabroso.</p>
+            <span class="product-price">$300<small>/unidad</small></span>
+          </div>
+        </div>
+        
+        <div class="product-card" data-category="otros" data-aos="fade-up" data-aos-delay="300">
+          <div class="product-image">
+            <img src="/api/placeholder/400/300" alt="Pastafrola">
+          </div>
+          <div class="product-info">
+            <h3>Pastafrola</h3>
+            <p>Masa quebrada y relleno de membrillo, batata o dulce de leche.</p>
+            <span class="product-price">$2800<small>/porción</small></span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-50">
+        <p class="mb-20">¿Necesitas algo especial? ¡Hacemos productos personalizados!</p>
+        <a href="#contacto" class="btn btn-primary">Hacer un pedido</a>
       </div>
     </div>
   </section>
 
+  <!-- Galería Section -->
+  <section id="galeria" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Inspiración</span>
+        <h2 class="section-title" data-aos="fade-right">Galería</h2>
+      </div>
+      
+      <div class="gallery-grid">
+        <div class="gallery-item" data-aos="zoom-in">
+          <img src="/api/placeholder/600/400" alt="Producto de panadería">
+        </div>
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+          <img src="/api/placeholder/600/400" alt="Producto de panadería">
+        </div>
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="150">
+          <img src="/api/placeholder/600/400" alt="Producto de panadería">
+        </div>
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+          <img src="/api/placeholder/600/400" alt="Producto de panadería">
+        </div>
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="250">
+          <img src="/api/placeholder/600/400" alt="Producto de panadería">
+        </div>
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+          <img src="/api/placeholder/600/400" alt="Producto de panadería">
+        </div>
+      </div>
+      
+      <div class="text-center mt-50">
+        <a href="https://www.instagram.com/_el_colo/" target="_blank" class="btn btn-outline">
+          <i class="bi bi-instagram"></i> Síguenos en Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Separador -->
+  <div class="separator">
+    <div class="container">
+      <div class="stats-container">
+        <div class="stat-item" data-aos="fade-up">
+          <span class="stat-number">1000+</span>
+          <span class="stat-text">Clientes satisfechos</span>
+        </div>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+          <span class="stat-number">20+</span>
+          <span class="stat-text">Variedades de productos</span>
+        </div>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+          <span class="stat-number">365</span>
+          <span class="stat-text">Días de pasión</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonios Section -->
+  <section id="testimonios" class="section bg-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Qué dicen de nosotros</span>
+        <h2 class="section-title" data-aos="fade-right">Testimonios</h2>
+      </div>
+      
+      <div class="testimonials-slider" id="testimonials-container">
+        <div class="testimonial" data-aos="fade-up">
+          <div class="testimonial-content">
+            <div class="testimonial-rating">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p>"Las medialunas de El Colo son las mejores de Oberá, sin duda. Cada mañana paso a comprar para el desayuno y siempre están recién hechas."</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">
+              <img src="/api/placeholder/60/60" alt="Cliente">
+            </div>
+            <div class="testimonial-info">
+              <h4>Laura Gómez</h4>
+              <span>Cliente frecuente</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial" data-aos="fade-up" data-aos-delay="100">
+          <div class="testimonial-content">
+            <div class="testimonial-rating">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p>"El pan casero es excelente, con la corteza crujiente y la miga suave. Además, el trato es siempre cordial y amable. Totalmente recomendable."</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">
+              <img src="/api/placeholder/60/60" alt="Cliente">
+            </div>
+            <div class="testimonial-info">
+              <h4>Martín Rodríguez</h4>
+              <span>Cliente desde 2022</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial" data-aos="fade-up" data-aos-delay="200">
+          <div class="testimonial-content">
+            <div class="testimonial-rating">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-half"></i>
+            </div>
+            <p>"Encargué una torta para el cumpleaños de mi hijo y quedó espectacular. No solo era hermosa sino que estaba deliciosa. Todos quedaron fascinados."</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">
+              <img src="/api/placeholder/60/60" alt="Cliente">
+            </div>
+            <div class="testimonial-info">
+              <h4>Carolina Fernández</h4>
+              <span>Oberá</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="testimonial-controls">
+        <button class="testimonial-btn prev" id="testimonial-prev">
+          <i class="bi bi-chevron-left"></i>
+        </button>
+        <div class="testimonial-dots" id="testimonial-dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <button class="testimonial-btn next" id="testimonial-next">
+          <i class="bi bi-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Horarios Section -->
   <section id="horarios" class="section">
     <div class="container">
-      <h2 data-aos="fade-right">Horarios de atención</h2>
-      <div class="horarios" data-aos="fade-up">
-        <p><strong>Lunes a Sábados:</strong> 8:00 a 12:30 | 16:30 a 21:30</p>
-        <p><strong>Domingos:</strong> 8:30 a 12:00 | 16:30 a 21:00</p>
+      <div class="section-header">
+        <span class="section-subtitle">Visítanos</span>
+        <h2 class="section-title" data-aos="fade-right">Horarios de atención</h2>
+      </div>
+      
+      <div class="grid-2">
+        <div class="horarios-card" data-aos="fade-up">
+          <div class="horarios-header">
+            <i class="bi bi-clock"></i>
+            <h3>Atención al público</h3>
+          </div>
+          <div class="horarios-content">
+            <div class="horario-item">
+              <div class="dia">Lunes a Sábados:</div>
+              <div class="hora">8:00 a 12:30 | 16:30 a 21:30</div>
+            </div>
+            <div class="horario-item">
+              <div class="dia">Domingos:</div>
+              <div class="hora">8:30 a 12:00 | 16:30 a 21:00</div>
+            </div>
+            <div class="horario-special">
+              <i class="bi bi-exclamation-circle"></i>
+              <p>Horarios especiales en feriados - consultar por redes</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="location-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="location-content">
+            <h3><i class="bi bi-geo-alt"></i> Nuestra ubicación</h3>
+            <address>
+              Av. de las Américas 123<br>
+              Oberá, Misiones<br>
+              Argentina
+            </address>
+            <a href="https://maps.google.com" target="_blank" class="btn btn-sm">Ver en mapa</a>
+          </div>
+          <div class="location-image">
+            <img src="/api/placeholder/400/200" alt="Ubicación El Colo">
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- Newsletter Section -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-container" data-aos="zoom-in">
+        <div class="newsletter-content">
+          <h3>Suscríbete a nuestro newsletter</h3>
+          <p>Recibe ofertas especiales y novedades sobre nuestros productos directamente en tu correo.</p>
+        </div>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Tu correo electrónico" required>
+          <button type="submit" class="btn btn-primary">Suscribirse</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto Section -->
   <section id="contacto" class="section bg-light">
     <div class="container">
-      <h2 data-aos="fade-right">Contacto</h2>
-      <div class="grid-3">
-        <a href="https://wa.link/hjxzrh" target="_blank" class="contact-card" data-aos="zoom-in">
-          <i class="bi bi-whatsapp"></i>
-          <h4>Whatsapp</h4>
-        </a>
-        <a href="https://www.instagram.com/_el_colo/" target="_blank" class="contact-card" data-aos="zoom-in">
-          <i class="bi bi-instagram"></i>
-          <h4>Instagram</h4>
-        </a>
-        <div class="contact-card" data-aos="zoom-in">
-          <i class="bi bi-envelope"></i>
-          <h4>Formulario</h4>
-          <form action="https://formspree.io/f/tu-codigo-aqui" method="POST">
-            <input type="text" name="nombre" placeholder="Nombre" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
-            <button type="submit" class="btn">Enviar</button>
+      <div class="section-header">
+        <span class="section-subtitle">Estamos aquí</span>
+        <h2 class="section-title" data-aos="fade-right">Contacto</h2>
+      </div>
+      
+      <div class="contact-wrapper">
+        <div class="contact-info" data-aos="fade-up">
+          <div class="contact-block">
+            <i class="bi bi-telephone"></i>
+            <div>
+              <h4>Teléfono</h4>
+              <p>+54 3755 123456</p>
+            </div>
+          </div>
+          <div class="contact-block">
+            <i class="bi bi-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <p>info@elcolo.com</p>
+            </div>
+          </div>
+          <div class="contact-block">
+            <i class="bi bi-geo-alt"></i>
+            <div>
+              <h4>Dirección</h4>
+              <p>Av. de las Américas 123, Oberá</p>
+            </div>
+          </div>
+          
+          <div class="social-links">
+            <h4>Síguenos</h4>
+            <div class="social-icons">
+              <a href="https://www.instagram.com/_el_colo/" target="_blank" aria-label="Instagram">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="https://wa.link/hjxzrh" target="_blank" aria-label="WhatsApp">
+                <i class="bi bi-whatsapp"></i>
+              </a>
+              <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                <i class="bi bi-facebook"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form-container" data-aos="fade-up" data-aos-delay="100">
+          <form class="contact-form" id="contact-form">
+            <div class="form-header">
+              <h3>Envíanos un mensaje</h3>
+              <p>Completa el formulario y te responderemos a la brevedad</p>
+            </div>
+            
+            <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Tu email" required>
+              </div>
+              <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Tu teléfono">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="asunto">Asunto</label>
+              <select id="asunto" name="asunto" required>
+                <option value="" selected disabled>Selecciona una opción</option>
+                <option value="consulta">Consulta general</option>
+                <option value="pedido">Realizar un pedido</option>
+                <option value="sugerencia">Sugerencia</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí" rows="5" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-block">Enviar mensaje</button>
           </form>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- WhatsApp Float Button -->
+  <a href="https://wa.link/hjxzrh" class="whatsapp-float" target="_blank">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" aria-label="Volver arriba">
+    <i class="bi bi-chevron-up"></i>
+  </button>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 <strong>El Colo</strong> | Diseño por Gabriel</p>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-info">
+          <h2 class="footer-logo">El Colo</h2>
+          <p class="footer-tagline">Panadería & Confitería Artesanal</p>
+          <p class="footer-desc">Elaboración casera desde 2021, ofreciendo productos de calidad y sabor inigualable.</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Enlaces rápidos</h4>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>Contacto</h4>
+          <ul>
+            <li><i class="bi bi-geo-alt"></i> Av. de las Américas 123, Oberá</li>
+            <li><i class="bi bi-telephone"></i> +54 3755 123456</li>
+            <li><i class="bi bi-envelope"></i> info@elcolo.com</li>
+          </ul>
+        </div>
+        
+        <div class="footer-hours">
+          <h4>Horarios</h4>
+          <ul>
+            <li><span>Lun-Sáb:</span> 8:00 a 12:30 | 16:30 a 21:30</li>
+            <li><span>Domingos:</span> 8:30 a 12:00 | 16:30 a 21:00</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 <strong>El Colo</strong> | Todos los derechos reservados</p>
+        <p>Diseño por Gabriel</p>
+      </div>
+    </div>
   </footer>
 
+  <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
-    AOS.init();
-
+    // Inicializar AOS (Animate on Scroll)
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    });
+    
+    // Toggle Menu
     const toggle = document.getElementById("menu-toggle");
     const nav = document.getElementById("nav");
-    toggle.addEventListener("click", () => nav.classList.toggle("show"));
+    const navLinks = document.querySelectorAll(".nav-link");
+    
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("show");
+      toggle.setAttribute("aria-expanded", nav.classList.contains("show"));
+    });
+    
+    // Cerrar menú al hacer clic en un enlace
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("show");
+        toggle.setAttribute("aria-expanded", "false");
+      });
+    });
+    
+    // Header scroll
+    const header = document.getElementById("header");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+    
+    // Filtro de productos
+    const categoryTabs = document.querySelectorAll(".category-tab");
+    const productCards = document.querySelectorAll(".product-card");
+    
+    categoryTabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        // Remover clase active de todas las pestañas
+        categoryTabs.forEach(t => t.classList.remove("active"));
+        
+        // Agregar clase active a la pestaña clickeada
+        tab.classList.add("active");
+        
+        // Filtrar productos
+        const category = tab.dataset.category;
+         productCards.forEach(card => {
+          if (category === "all" || card.dataset.category === category) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+    });
+    
+    // Testimoniales Slider
+    const testimonialContainer = document.getElementById("testimonials-container");
+    const testimonials = document.querySelectorAll(".testimonial");
+    const prevBtn = document.getElementById("testimonial-prev");
+    const nextBtn = document.getElementById("testimonial-next");
+    const dots = document.querySelectorAll(".dot");
+    let currentIndex = 0;
+    
+    function updateTestimonials() {
+      // Actualizar la posición del slider
+      testimonialContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+      
+      // Actualizar dots
+      dots.forEach((dot, index) => {
+        dot.classList.toggle("active", index === currentIndex);
+      });
+    }
+    
+    prevBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+      updateTestimonials();
+    });
+    
+    nextBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % testimonials.length;
+      updateTestimonials();
+    });
+    
+    dots.forEach((dot, index) => {
+      dot.addEventListener("click", () => {
+        currentIndex = index;
+        updateTestimonials();
+      });
+    });
+    
+    // Auto avance de testimoniales
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % testimonials.length;
+      updateTestimonials();
+    }, 5000);
+    
+    // Back to Top Button
+    const backToTopButton = document.getElementById("back-to-top");
+    
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        backToTopButton.classList.add("show");
+      } else {
+        backToTopButton.classList.remove("show");
+      }
+    });
+    
+    backToTopButton.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+    
+    // Formulario de contacto - validación simple
+    const contactForm = document.getElementById("contact-form");
+    
+    if (contactForm) {
+      contactForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        
+        // Aquí iría la lógica para enviar el formulario via AJAX
+        // Por ahora solo mostraremos un mensaje
+        
+        const formElements = contactForm.elements;
+        let isValid = true;
+        
+        for (let i = 0; i < formElements.length; i++) {
+          if (formElements[i].hasAttribute("required") && !formElements[i].value) {
+            isValid = false;
+            formElements[i].classList.add("error");
+          } else {
+            formElements[i].classList.remove("error");
+          }
+        }
+        
+        if (isValid) {
+          // Simulamos envío exitoso
+          const submitButton = contactForm.querySelector('button[type="submit"]');
+          const originalText = submitButton.textContent;
+          
+          submitButton.disabled = true;
+          submitButton.textContent = "Enviando...";
+          
+          setTimeout(() => {
+            alert("¡Mensaje enviado con éxito! Te contactaremos pronto.");
+            contactForm.reset();
+            submitButton.disabled = false;
+            submitButton.textContent = originalText;
+          }, 1500);
+        }
+      });
+    }
+    
+    // Smooth scroll para enlaces internos
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const href = this.getAttribute('href');
+        
+        const offsetTop = document.querySelector(href).offsetTop - 80;
+        
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth'
+        });
+      });
+    });
   </script>
-
 </body>
-
 </html>
